@@ -11,7 +11,7 @@
 
                     <div v-for="postcard in postcards" :key="postcard.id" class="card-body">
                         {{postcard.name}} - {{postcard. address}} - 
-                        <span v-if="postcard.image"> {{postcard.image}} </span>
+                        <span class="img-postcard" v-if="postcard.image"> <img :src="`/storage/postcards/${postcard.image}`" > </span>
                         <span v-else>no-image</span>
                     </div>
                 </div>

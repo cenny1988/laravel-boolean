@@ -37573,7 +37573,11 @@ var render = function () {
                     " - \n                    "
                 ),
                 postcard.image
-                  ? _c("span", [_vm._v(" " + _vm._s(postcard.image) + " ")])
+                  ? _c("span", { staticClass: "img-postcard" }, [
+                      _c("img", {
+                        attrs: { src: "/storage/postcards/" + postcard.image },
+                      }),
+                    ])
                   : _c("span", [_vm._v("no-image")]),
               ])
             }),
